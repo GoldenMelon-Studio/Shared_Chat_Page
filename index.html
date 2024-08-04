@@ -75,6 +75,7 @@
     <div class="tabs">
         <button class="tab active" onclick="showAccounts('claude')">Claude</button>
         <button class="tab" onclick="showAccounts('chatgpt')">ChatGPT</button>
+        <button class="tab" onclick="showAccounts('chatgpt-api')">ChatGPT API</button>
     </div>
 
     <div id="claude-accounts" class="accounts-grid">
@@ -125,10 +126,35 @@
         </a>
     </div>
 
+    <div id="chatgpt-api-accounts" class="accounts-grid" style="display: none;">
+        <!-- ChatGPT Accounts -->
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 1</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account mini">
+            <div>账号 2</div>
+            <div class="status">MINI | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 3</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account mini">
+            <div>账号 4</div>
+            <div class="status">MINI | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 5</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+    </div>
+
     <script>
         function showAccounts(type) {
             document.getElementById('claude-accounts').style.display = type === 'claude' ? 'grid' : 'none';
             document.getElementById('chatgpt-accounts').style.display = type === 'chatgpt' ? 'grid' : 'none';
+            document.getElementById('chatgpt-api-accounts').style.display = type === 'chatgpt-api' ? 'grid' : 'none';
             
             // Update active tab
             document.querySelectorAll('.tab').forEach(tab => {
