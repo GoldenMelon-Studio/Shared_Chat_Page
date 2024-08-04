@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude\ChatGPT免费账号</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 18px;
+            color: #333;
+        }
+        .tab.active {
+            border-bottom: 2px solid #007bff;
+            color: #007bff;
+        }
+        .accounts-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .account {
+            border: 1px solid #ccc;
+            padding: 15px 10px; /* Increased vertical padding for taller buttons */
+            border-radius: 5px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .account:hover {
+            background-color: #f0f0f0;
+        }
+        .account.plus {
+            border-color: #8e44ad;
+        }
+        .account.mini {
+            border-color: #3498db;
+        }
+        .status {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .plus .status {
+            color: #8e44ad;
+        }
+        .mini .status {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Claude\ChatGPT免费账号</h1>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showAccounts('claude')">Claude</button>
+        <button class="tab" onclick="showAccounts('chatgpt')">ChatGPT</button>
+    </div>
+
+    <div id="claude-accounts" class="accounts-grid">
+        <!-- Claude Accounts -->
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 1</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 2</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account mini">
+            <div>账号 3</div>
+            <div class="status">MINI | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account mini">
+            <div>账号 4</div>
+            <div class="status">MINI | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 5</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+    </div>
+
+    <div id="chatgpt-accounts" class="accounts-grid" style="display: none;">
+        <!-- ChatGPT Accounts -->
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 1</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account mini">
+            <div>账号 2</div>
+            <div class="status">MINI | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 3</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account mini">
+            <div>账号 4</div>
+            <div class="status">MINI | 实时可用</div>
+        </a>
+        <a href="https://example.com" target="_blank" class="account plus">
+            <div>账号 5</div>
+            <div class="status">PLUS | 实时可用</div>
+        </a>
+    </div>
+
+    <script>
+        function showAccounts(type) {
+            document.getElementById('claude-accounts').style.display = type === 'claude' ? 'grid' : 'none';
+            document.getElementById('chatgpt-accounts').style.display = type === 'chatgpt' ? 'grid' : 'none';
+            
+            // Update active tab
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
